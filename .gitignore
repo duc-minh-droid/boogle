@@ -1,0 +1,12 @@
+# Rust build files
+/target/
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+
+# Environment files
+.env
