@@ -1,0 +1,1023 @@
+Rust (programming language)
+
+Rust is a systems programming language focused on memory safety, speed and fearless concurrency. It uses an ownership model with borrowing and lifetimes checked at compile time, so programs avoid data races and dangling pointers without a garbage collector. Cargo is its build tool and package manager, and crates are published to crates.io.
+
+
+C (programming language)
+
+C is a general purpose programming language created by Dennis Ritchie at Bell Labs in the early 1970s. It gives the programmer direct access to memory through pointers and compiles to fast machine code. The Unix operating system was rewritten in C, and most operating system kernels are still written in it today.
+
+
+C++
+
+C++ is a programming language designed by Bjarne Stroustrup as an extension of C with classes. It supports object oriented, generic and procedural programming. Templates, RAII and the standard library make it popular for games, browsers, trading systems and other performance critical software.
+
+
+Python (programming language)
+
+Python is a high level interpreted programming language known for readable syntax and significant indentation. It was created by Guido van Rossum and first released in 1991. Python is widely used in data science, machine learning, scripting, web development and teaching beginners to program.
+
+
+JavaScript
+
+JavaScript is the programming language of the web browser. It is dynamically typed, uses prototypes for inheritance and runs on an event loop with callbacks, promises and async functions. Node.js brought JavaScript to servers, and it is now one of the most used languages in the world.
+
+
+Haskell
+
+Haskell is a purely functional programming language with lazy evaluation and a strong static type system. Functions have no side effects unless they run inside the IO monad. Type classes, pattern matching and type inference let programmers write concise and correct code.
+
+
+Go (programming language)
+
+Go is a statically typed compiled language designed at Google by Robert Griesemer, Rob Pike and Ken Thompson. It has garbage collection, a small syntax and built in concurrency through goroutines and channels. Go is common in cloud infrastructure, command line tools and network servers.
+
+
+Java (programming language)
+
+Java is an object oriented programming language that compiles to bytecode for the Java Virtual Machine. Its promise of write once, run anywhere made it popular for enterprise software and Android apps. The JVM uses a garbage collector and a just in time compiler to run programs quickly.
+
+
+Lisp
+
+Lisp is a family of programming languages that began with John McCarthy in 1958. Code and data share the same list structure, written with many parentheses, which makes powerful macros possible. Scheme, Common Lisp and Clojure are well known dialects, and Lisp pioneered garbage collection and recursion in practice.
+
+
+Compiler
+
+A compiler translates source code written in a programming language into machine code or another lower level form. Typical stages are lexing, parsing into a syntax tree, semantic analysis, optimization and code generation. Compilers for Rust and C++ often use LLVM as a shared back end.
+
+
+Interpreter (computing)
+
+An interpreter runs a program directly by reading and executing its instructions, instead of first translating the whole program to machine code. Many interpreters compile source to bytecode and then run it on a virtual machine. Python and early versions of JavaScript engines were interpreters.
+
+
+Garbage collection
+
+Garbage collection is automatic memory management that frees memory the program can no longer reach. Common techniques include reference counting, mark and sweep and generational collection. It removes whole classes of memory bugs but can add pauses, which is why languages like Rust and C avoid it.
+
+
+Operating system
+
+An operating system manages the hardware of a computer and provides services to programs. The kernel handles processes, memory, file systems and device drivers, while user space holds applications. Linux, Windows and macOS are the most common desktop operating systems.
+
+
+Linux
+
+Linux is a free and open source operating system kernel first released by Linus Torvalds in 1991. Combined with GNU tools it forms complete distributions such as Debian, Ubuntu and Fedora. Linux runs most web servers, supercomputers and every Android phone.
+
+
+Unix
+
+Unix is a family of multitasking operating systems that began at Bell Labs in 1969 with Ken Thompson and Dennis Ritchie. Its philosophy favours small programs that do one thing well and are joined together with pipes. macOS, BSD and Linux all descend from or imitate Unix.
+
+
+Process scheduling
+
+Process scheduling is how an operating system decides which process runs on the processor next. Algorithms include first come first served, round robin, shortest job first and multilevel feedback queues. A good scheduler balances throughput, response time and fairness between processes.
+
+
+Virtual memory
+
+Virtual memory gives every process its own address space that the hardware maps to physical memory in pages. When memory runs short, pages can be swapped to disk. The translation lookaside buffer caches recent page table lookups to keep memory access fast.
+
+
+File system
+
+A file system organizes data on a storage device into files and directories. It tracks where each block lives, who may access it and when it changed. Examples include ext4 on Linux, NTFS on Windows and APFS on macOS, and journaling helps them recover after a crash.
+
+
+Database
+
+A database is an organized collection of data managed by a database management system. Relational databases store rows in tables and are queried with SQL, while document, key value and graph databases trade structure for flexibility. Indexes make lookups fast and transactions keep data consistent.
+
+
+SQL
+
+SQL, the Structured Query Language, is used to query and change data in relational databases. A SELECT statement names columns, tables and conditions, and joins combine rows from several tables. PostgreSQL, MySQL and SQLite are popular database engines that speak SQL.
+
+
+Inverted index
+
+An inverted index maps each word to the list of documents that contain it, called a posting list. It is the core data structure of search engines, because a query only has to read the posting lists of its own terms instead of scanning every document. Posting lists are often sorted and compressed.
+
+
+Search engine
+
+A search engine finds documents that match a query and ranks them by relevance. It crawls or loads documents, tokenizes and indexes them in an inverted index, and scores matches with models such as TF-IDF or BM25. Web search engines like Google also use links between pages to judge importance.
+
+
+TF-IDF
+
+TF-IDF stands for term frequency times inverse document frequency. A word scores highly in a document when it appears often in that document but rarely in the rest of the collection. It is a classic weighting scheme for search ranking, keyword extraction and text classification.
+
+
+Stemming
+
+Stemming reduces words to a common root so that running, runs and run match the same index term. The Porter stemmer and its successor Snowball apply suffix stripping rules for English. Stemming improves recall in search engines but sometimes merges words with different meanings.
+
+
+PageRank
+
+PageRank is an algorithm that ranks web pages by the links pointing to them. A page is important if important pages link to it, which is computed as the steady state of a random surfer clicking links. Larry Page and Sergey Brin used it as the basis of the Google search engine.
+
+
+Hash table
+
+A hash table stores key value pairs in an array, using a hash function to pick the slot for each key. Lookups, inserts and deletes take constant time on average. Collisions are handled by chaining or open addressing, and the table grows when it becomes too full.
+
+
+Binary search tree
+
+A binary search tree keeps keys in sorted order, with smaller keys in the left subtree and larger keys in the right. Search, insert and delete take time proportional to the height of the tree. Balanced variants such as red black trees and AVL trees keep the height logarithmic.
+
+
+B-tree
+
+A B-tree is a balanced search tree where each node holds many keys and has many children. Because each node fits a disk page, it needs few reads to find a key, which makes it the standard index structure for databases and file systems.
+
+
+Linked list
+
+A linked list is a sequence of nodes where each node points to the next one. Inserting or removing a node is cheap once you have a pointer to it, but finding the nth element requires walking the list. Doubly linked lists also point backwards.
+
+
+Sorting algorithm
+
+A sorting algorithm puts elements of a list in order. Quicksort, merge sort and heapsort run in n log n time on average, while insertion sort is fast for small or nearly sorted inputs. Stable sorts keep equal elements in their original order.
+
+
+Quicksort
+
+Quicksort is a divide and conquer sorting algorithm invented by Tony Hoare in 1959. It picks a pivot, partitions the array into smaller and larger elements, and sorts each part recursively. It is usually very fast in practice although its worst case is quadratic.
+
+
+Dijkstra's algorithm
+
+Dijkstra's algorithm finds the shortest paths from one node to all others in a graph with non negative edge weights. It repeatedly takes the closest unvisited node from a priority queue and relaxes its edges. Route planners and network routing protocols use it.
+
+
+Graph theory
+
+Graph theory studies graphs made of vertices connected by edges. It began with Leonhard Euler's problem of the seven bridges of Konigsberg. Graphs model road networks, social networks, the web and dependencies between tasks.
+
+
+Dynamic programming
+
+Dynamic programming solves problems by breaking them into overlapping subproblems and storing each answer so it is computed once. Classic examples are the Fibonacci numbers, the knapsack problem and edit distance between strings.
+
+
+Big O notation
+
+Big O notation describes how the running time or memory of an algorithm grows with the size of its input. Constant, logarithmic, linear, n log n and quadratic are common classes. It ignores constant factors and focuses on behaviour for large inputs.
+
+
+Machine learning
+
+Machine learning is a field of artificial intelligence where programs learn patterns from data instead of following hand written rules. Supervised learning fits labelled examples, unsupervised learning finds structure in unlabelled data, and reinforcement learning learns from rewards.
+
+
+Neural network
+
+An artificial neural network is a model made of layers of simple units connected by weighted edges. Training adjusts the weights with gradient descent and backpropagation to reduce a loss function. Deep networks with many layers power image recognition, speech recognition and language models.
+
+
+Large language model
+
+A large language model is a neural network trained on huge amounts of text to predict the next token. Most are built on the transformer architecture with attention layers. They can answer questions, write code and summarize documents, but can also make confident mistakes.
+
+
+Transformer (machine learning)
+
+The transformer is a neural network architecture introduced in 2017 that relies on self attention instead of recurrence. Every token can attend to every other token in the input, which makes training highly parallel. Transformers are the basis of modern language, vision and speech models.
+
+
+Cryptography
+
+Cryptography is the practice of protecting information with codes and ciphers. Symmetric ciphers like AES use one shared key, while public key systems like RSA use a key pair. Hash functions, digital signatures and key exchange protocols secure the modern internet.
+
+
+Public-key cryptography
+
+Public key cryptography uses a pair of keys: a public key anyone may know and a private key kept secret. Data encrypted with the public key can only be decrypted with the private key. RSA and elliptic curve cryptography are widely used, and the Diffie Hellman exchange lets two parties agree on a secret over an open channel.
+
+
+Internet
+
+The Internet is a global network of computer networks that communicate with the TCP/IP protocol suite. It grew out of ARPANET in the late 1960s and opened to the public in the 1990s. Email, the World Wide Web, streaming video and online games all run on top of it.
+
+
+World Wide Web
+
+The World Wide Web is a system of linked hypertext documents accessed through the Internet. Tim Berners-Lee invented it at CERN in 1989, along with HTML, HTTP and URLs. Web browsers fetch pages from web servers and render them for the user.
+
+
+HTTP
+
+HTTP, the Hypertext Transfer Protocol, is the request and response protocol of the web. A client sends a method such as GET or POST with a path and headers, and the server replies with a status code and a body. HTTPS wraps HTTP in TLS encryption.
+
+
+TCP
+
+The Transmission Control Protocol provides reliable ordered delivery of a stream of bytes between two hosts. It uses a three way handshake, sequence numbers, acknowledgements and retransmission, and it slows down when the network is congested. HTTP and email traditionally run over TCP.
+
+
+Git
+
+Git is a distributed version control system created by Linus Torvalds in 2005 to manage Linux kernel development. Every clone holds the full history as a graph of commits. Branches are cheap, and changes are combined with merges or rebases. GitHub hosts millions of Git repositories.
+
+
+Turing machine
+
+A Turing machine is an abstract model of computation invented by Alan Turing in 1936. It reads and writes symbols on an infinite tape according to a table of rules. Anything a modern computer can compute can in principle be computed by a Turing machine.
+
+
+Alan Turing
+
+Alan Turing was an English mathematician and computer scientist. He formalized computation with the Turing machine, helped break the German Enigma cipher at Bletchley Park during the Second World War, and proposed the Turing test for machine intelligence.
+
+
+Ada Lovelace
+
+Ada Lovelace was an English mathematician who worked with Charles Babbage on his proposed Analytical Engine. Her notes from 1843 include an algorithm to compute Bernoulli numbers, often called the first computer program. She imagined machines that could work with music and symbols, not only numbers.
+
+
+Grace Hopper
+
+Grace Hopper was an American computer scientist and United States Navy rear admiral. She built one of the first compilers and helped create COBOL, a programming language meant to read like English. She popularized the word bug after a moth was found in a relay of the Harvard Mark II.
+
+
+Transistor
+
+A transistor is a semiconductor device that switches or amplifies electric current. It was invented at Bell Labs in 1947 and replaced vacuum tubes. Modern processors contain billions of tiny transistors made from silicon.
+
+
+Central processing unit
+
+The central processing unit executes the instructions of a computer program. It fetches, decodes and executes instructions, using registers, caches and pipelines to go fast. Modern processors have many cores and can run several instructions per clock cycle.
+
+
+Cache (computing)
+
+A cache is a small fast store that keeps copies of data likely to be needed again. CPU caches hold recent memory in levels L1, L2 and L3, browsers cache web pages and databases cache query results. The hard parts are deciding what to evict and keeping caches consistent.
+
+
+Moore's law
+
+Moore's law is the observation by Gordon Moore that the number of transistors on a chip doubles about every two years. It held for decades and drove the rapid growth of computing power, though the pace has slowed as transistors approach atomic scale.
+
+
+Quantum computing
+
+Quantum computing uses qubits that can be in a superposition of zero and one and can become entangled with each other. Quantum algorithms such as Shor's algorithm could factor large numbers far faster than classical computers, which threatens current public key cryptography.
+
+
+Video game
+
+A video game is an interactive game played on a computer, console or phone. Early arcade games such as Pong and Space Invaders led to home consoles from Atari, Nintendo, Sega, Sony and Microsoft. Game engines handle graphics, physics, sound and input.
+
+
+Tetris
+
+Tetris is a puzzle video game created by Alexey Pajitnov in the Soviet Union in 1984. Falling pieces made of four squares must be rotated and placed to complete horizontal lines, which then disappear. The Game Boy version made it one of the best selling games ever.
+
+
+Minecraft
+
+Minecraft is a sandbox video game where players mine blocks and build structures in a procedurally generated world made of cubes. It has survival and creative modes and a large modding community. It is one of the best selling video games of all time.
+
+
+Chess
+
+Chess is a two player strategy board game played on a board of sixty four squares. Each player has sixteen pieces: a king, a queen, two rooks, two bishops, two knights and eight pawns. The goal is checkmate, trapping the opponent's king. Computers such as Deep Blue and later engines surpassed the best humans.
+
+
+Go (game)
+
+Go is an ancient board game from China in which two players place black and white stones to surround territory. Its simple rules produce enormous complexity. In 2016 the program AlphaGo, using neural networks and tree search, defeated the champion Lee Sedol.
+
+
+Sun
+
+The Sun is the star at the centre of the Solar System. It is a nearly perfect ball of hot plasma that produces energy by nuclear fusion of hydrogen into helium in its core. Its light takes about eight minutes to reach Earth and drives weather, climate and photosynthesis.
+
+
+Moon
+
+The Moon is Earth's only natural satellite. It probably formed from debris after a Mars sized body collided with the young Earth. The Moon's gravity causes ocean tides, and its phases come from the changing angle of sunlight. Twelve astronauts walked on it during the Apollo program.
+
+
+Mars
+
+Mars is the fourth planet from the Sun, a cold desert world with a thin carbon dioxide atmosphere. Its red colour comes from iron oxide dust. Mars has the tallest volcano in the Solar System, Olympus Mons, and rovers such as Curiosity and Perseverance search it for signs of ancient water and life.
+
+
+Jupiter
+
+Jupiter is the largest planet in the Solar System, a gas giant made mostly of hydrogen and helium. Its Great Red Spot is a storm larger than Earth that has lasted for centuries. Jupiter has dozens of moons, including the four large Galilean moons discovered by Galileo in 1610.
+
+
+Saturn
+
+Saturn is the sixth planet from the Sun and is famous for its bright rings of ice and rock. It is a gas giant less dense than water. Its largest moon Titan has a thick atmosphere and lakes of liquid methane, and the Cassini spacecraft studied the system for thirteen years.
+
+
+Black hole
+
+A black hole is a region of space where gravity is so strong that nothing, not even light, can escape once it crosses the event horizon. Black holes form when massive stars collapse. Supermassive black holes sit at the centres of galaxies, and the first image of one was released in 2019.
+
+
+Milky Way
+
+The Milky Way is the barred spiral galaxy that contains the Solar System. It holds hundreds of billions of stars and a supermassive black hole called Sagittarius A star at its centre. From Earth it appears as a faint band of light across the night sky.
+
+
+Big Bang
+
+The Big Bang theory describes how the universe expanded from an extremely hot and dense early state about 13.8 billion years ago. Evidence includes the cosmic microwave background, the abundance of light elements and the redshift of distant galaxies moving away from us.
+
+
+Apollo 11
+
+Apollo 11 was the NASA mission that first landed humans on the Moon in July 1969. Neil Armstrong and Buzz Aldrin walked on the surface while Michael Collins orbited in the command module. Armstrong's first step was watched on television by hundreds of millions of people.
+
+
+International Space Station
+
+The International Space Station is a large habitable satellite in low Earth orbit, built by the space agencies of the United States, Russia, Europe, Japan and Canada. Astronauts have lived on board continuously since 2000, running experiments in microgravity.
+
+
+Telescope
+
+A telescope collects light to observe distant objects. Refracting telescopes use lenses and reflecting telescopes use mirrors. Space telescopes such as Hubble and James Webb avoid the blurring of Earth's atmosphere and observe in infrared and ultraviolet light.
+
+
+Gravity
+
+Gravity is the force by which masses attract each other. Isaac Newton described it with an inverse square law, and Albert Einstein's general relativity explains it as the curvature of spacetime by mass and energy. Gravity keeps planets in orbit and holds galaxies together.
+
+
+Albert Einstein
+
+Albert Einstein was a German born theoretical physicist best known for the theories of special and general relativity and the equation E equals m c squared. He received the Nobel Prize in Physics in 1921 for explaining the photoelectric effect, which helped found quantum theory.
+
+
+Isaac Newton
+
+Isaac Newton was an English mathematician and physicist who formulated the laws of motion and universal gravitation. He built the first practical reflecting telescope, studied light with prisms and developed calculus at the same time as Gottfried Leibniz.
+
+
+Marie Curie
+
+Marie Curie was a Polish and naturalised French physicist and chemist who researched radioactivity. She discovered the elements polonium and radium and was the first person to win Nobel Prizes in two different sciences, physics and chemistry.
+
+
+Charles Darwin
+
+Charles Darwin was an English naturalist whose theory of evolution by natural selection explains how species change over time. His observations during the voyage of HMS Beagle, including finches on the Galapagos Islands, shaped his book On the Origin of Species published in 1859.
+
+
+Evolution
+
+Evolution is the change in heritable traits of populations over generations. Natural selection favours individuals whose traits help them survive and reproduce, while mutation, genetic drift and gene flow add variation. All living things share common ancestry.
+
+
+DNA
+
+DNA, deoxyribonucleic acid, is the molecule that carries genetic instructions in living organisms. It is a double helix of two strands made of the bases adenine, thymine, guanine and cytosine. Its structure was described by James Watson and Francis Crick in 1953 using X ray images by Rosalind Franklin.
+
+
+Cell (biology)
+
+The cell is the basic unit of life. Prokaryotic cells such as bacteria have no nucleus, while eukaryotic cells in plants and animals keep their DNA in a nucleus and have organelles like mitochondria. Cells divide by mitosis to grow and repair tissue.
+
+
+Photosynthesis
+
+Photosynthesis is the process by which plants, algae and some bacteria turn light energy into chemical energy. Using chlorophyll, they combine carbon dioxide and water to make glucose and release oxygen. Almost all life on Earth depends on it for food and air.
+
+
+Vaccine
+
+A vaccine trains the immune system to recognise a pathogen without causing the disease. Edward Jenner developed the first vaccine against smallpox in 1796 using cowpox. Vaccination eradicated smallpox and has greatly reduced polio, measles and many other diseases.
+
+
+Antibiotic
+
+An antibiotic is a medicine that kills or stops the growth of bacteria. Alexander Fleming discovered penicillin in 1928 when mould killed bacteria in a dish. Overuse of antibiotics has led to resistant bacteria, which is a growing problem for medicine.
+
+
+Human brain
+
+The human brain is the control centre of the nervous system, made of around eighty six billion neurons connected by synapses. Different regions handle movement, vision, language, memory and emotion. Neurons communicate with electrical impulses and chemical neurotransmitters.
+
+
+Heart
+
+The heart is a muscular organ that pumps blood through the circulatory system. The human heart has four chambers, two atria and two ventricles, and beats about one hundred thousand times a day. Arteries carry blood away from the heart and veins bring it back.
+
+
+Periodic table
+
+The periodic table arranges the chemical elements by atomic number in rows and columns, so that elements with similar properties line up in groups. Dmitri Mendeleev published an early version in 1869 and left gaps for elements that were discovered later.
+
+
+Water
+
+Water is a chemical compound of two hydrogen atoms and one oxygen atom. It covers about seventy one percent of Earth's surface and is essential for all known life. Water is unusual because its solid form, ice, is less dense than its liquid form, so ice floats.
+
+
+Atom
+
+An atom is the smallest unit of a chemical element. It has a dense nucleus of protons and neutrons surrounded by electrons. The number of protons sets the element, and electrons in the outer shell decide how the atom bonds with others.
+
+
+Electricity
+
+Electricity is the set of phenomena caused by electric charge and its movement. Electric current flows through conductors such as copper wire and powers lights, motors and computers. Michael Faraday discovered electromagnetic induction, the principle behind generators.
+
+
+Climate change
+
+Climate change is the long term shift in global temperatures and weather patterns. Since the industrial revolution, burning coal, oil and gas has raised carbon dioxide in the atmosphere and warmed the planet. Effects include rising sea levels, melting glaciers and more extreme heat waves.
+
+
+Volcano
+
+A volcano is an opening in Earth's crust where molten rock, ash and gas escape. Volcanoes form at tectonic plate boundaries and hot spots such as Hawaii. The eruption of Mount Vesuvius in 79 AD buried the Roman towns of Pompeii and Herculaneum.
+
+
+Earthquake
+
+An earthquake is the shaking of the ground caused by a sudden release of energy in Earth's crust, usually along a fault where tectonic plates meet. Its strength is measured on the moment magnitude scale. Undersea earthquakes can trigger tsunamis.
+
+
+Plate tectonics
+
+Plate tectonics is the theory that Earth's outer shell is divided into large plates that slowly move over the mantle. Their motion builds mountains, opens oceans and causes earthquakes and volcanoes. Alfred Wegener first proposed continental drift in 1912.
+
+
+Rainforest
+
+A rainforest is a dense forest with very high rainfall. Tropical rainforests such as the Amazon and the Congo hold more than half of the world's plant and animal species. Deforestation for farming and logging threatens them.
+
+
+Ocean
+
+The ocean is the body of salt water that covers most of Earth. It is divided into the Pacific, Atlantic, Indian, Southern and Arctic oceans. Oceans store heat, drive weather through currents and absorb large amounts of carbon dioxide.
+
+
+Coral reef
+
+A coral reef is an underwater ecosystem built by colonies of tiny animals called coral polyps, which lay down calcium carbonate skeletons. Reefs shelter a quarter of marine species. The Great Barrier Reef off Australia is the largest, and warming seas cause coral bleaching.
+
+
+Honey bee
+
+The honey bee is a social insect that lives in colonies with one queen, thousands of female workers and some male drones. Bees collect nectar and pollen from flowers, pollinating crops along the way, and turn nectar into honey stored in wax combs. Workers share the location of flowers with a waggle dance.
+
+
+Ant
+
+Ants are social insects that live in colonies ranging from a few dozen to millions of individuals. They communicate with chemical trails called pheromones. Leafcutter ants farm fungus, and army ants move in huge raiding columns across the forest floor.
+
+
+Octopus
+
+The octopus is a soft bodied mollusc with eight arms lined with suckers. Octopuses are among the most intelligent invertebrates: they solve puzzles, open jars and escape from tanks. They change the colour and texture of their skin to hide and squirt ink to escape predators.
+
+
+Blue whale
+
+The blue whale is the largest animal known to have ever lived, reaching around thirty metres long. It feeds almost entirely on tiny krill, filtering them through baleen plates. Commercial whaling nearly wiped it out in the twentieth century.
+
+
+Dolphin
+
+Dolphins are intelligent marine mammals related to whales. They live in groups called pods, communicate with clicks and whistles and find food using echolocation. The bottlenose dolphin is the best known species.
+
+
+Shark
+
+Sharks are fish with skeletons made of cartilage rather than bone. They have existed for over four hundred million years. The great white shark is a famous predator, while the whale shark, the largest fish, eats plankton.
+
+
+Penguin
+
+Penguins are flightless seabirds that live mostly in the Southern Hemisphere. Their wings have become flippers for swimming, and a layer of fat and dense feathers keeps them warm. Emperor penguins breed during the Antarctic winter, with males keeping the egg warm on their feet.
+
+
+Eagle
+
+Eagles are large birds of prey with hooked beaks, powerful talons and very sharp eyesight. The bald eagle is the national bird of the United States, and the golden eagle hunts across the Northern Hemisphere.
+
+
+Owl
+
+Owls are mostly nocturnal birds of prey with large forward facing eyes and excellent hearing. Special feathers let them fly almost silently. They swallow small prey whole and cough up pellets of fur and bone.
+
+
+Cat
+
+The domestic cat is a small carnivorous mammal kept as a pet for thousands of years. Cats are agile hunters with retractable claws, keen night vision and a strong sense of smell. They purr, groom themselves and sleep for much of the day.
+
+
+Dog
+
+The domestic dog descends from wolves and was the first animal domesticated by humans. Dogs have been bred into hundreds of breeds for herding, hunting, guarding and companionship. Their sense of smell is tens of thousands of times more sensitive than ours.
+
+
+Wolf
+
+The wolf is a wild canine that lives and hunts in packs led by a breeding pair. Wolves communicate with howls, body language and scent marking. Their reintroduction to Yellowstone National Park changed the behaviour of elk and helped rivers and forests recover.
+
+
+Elephant
+
+Elephants are the largest living land animals. African and Asian elephants use their trunks to breathe, drink, grab food and greet each other. They live in family herds led by an older female, have long memories and are threatened by poaching for ivory.
+
+
+Tiger
+
+The tiger is the largest cat species, recognisable by its orange coat with black stripes. Tigers are solitary hunters of deer and wild pigs in forests of Asia. Habitat loss and poaching have made them endangered.
+
+
+Lion
+
+The lion is a large cat of the African savanna that lives in groups called prides. Females do most of the hunting while males defend the territory. The male lion's mane makes it one of the most recognisable animals.
+
+
+Giraffe
+
+The giraffe is the tallest living animal, with a long neck that lets it browse leaves high in acacia trees. Its coat has a pattern of patches unique to each animal. Despite the long neck it has only seven neck vertebrae, the same as humans.
+
+
+Panda
+
+The giant panda is a bear native to mountain forests of central China. It eats almost nothing but bamboo, spending up to fourteen hours a day feeding. Conservation work has helped panda numbers slowly recover.
+
+
+Kangaroo
+
+Kangaroos are marsupials from Australia that move by hopping on powerful hind legs and balance with a long tail. Females carry their young, called joeys, in a pouch. The red kangaroo is the largest marsupial alive.
+
+
+Butterfly
+
+Butterflies are insects with large scaly wings, often brightly coloured. They go through complete metamorphosis: egg, caterpillar, chrysalis and adult. Monarch butterflies migrate thousands of kilometres between Canada and Mexico each year.
+
+
+Dinosaur
+
+Dinosaurs were reptiles that dominated land ecosystems for over one hundred and sixty million years. Tyrannosaurus rex, Triceratops and the long necked sauropods are famous examples. Most died out sixty six million years ago after an asteroid impact, but birds are living dinosaurs.
+
+
+Pizza
+
+Pizza is an Italian dish of flat dough topped with tomato sauce and cheese and baked in a hot oven. The Margherita, with tomato, mozzarella and basil, comes from Naples. Pizza spread around the world with Italian emigrants and is now one of the most popular foods anywhere.
+
+
+Pasta
+
+Pasta is a staple Italian food made from durum wheat flour and water or eggs, shaped into forms such as spaghetti, penne, lasagne and ravioli. It is boiled and served with sauces ranging from simple olive oil and garlic to slow cooked meat ragu.
+
+
+Sushi
+
+Sushi is a Japanese dish of vinegared rice combined with raw fish, seafood or vegetables. Nigiri is a hand pressed ball of rice topped with fish, and maki is rolled in seaweed. Wasabi, pickled ginger and soy sauce are common accompaniments.
+
+
+Coffee
+
+Coffee is a drink brewed from roasted coffee beans, the seeds of the Coffea plant. It originated in Ethiopia and Yemen and spread through coffee houses in the Middle East and Europe. Its caffeine makes it one of the most consumed stimulants in the world.
+
+
+Tea
+
+Tea is a drink made by pouring hot water over cured leaves of the Camellia sinensis plant. Green, black, oolong and white teas differ in how the leaves are processed. Tea began in China and became central to culture in Japan, India and Britain.
+
+
+Chocolate
+
+Chocolate is made from roasted and ground cacao beans, which grow in pods on the cacao tree. The Maya and Aztecs drank it bitter and spiced. Sugar and milk were added in Europe, and today chocolate bars and cocoa are eaten everywhere.
+
+
+Bread
+
+Bread is a staple food baked from a dough of flour and water, usually raised with yeast. Yeast ferments sugars and produces carbon dioxide that makes the dough rise. Sourdough uses a wild culture of yeast and bacteria for a tangy flavour.
+
+
+Cheese
+
+Cheese is a food made by curdling milk with rennet or acid, separating the curds from the whey and ageing them. Thousands of varieties exist, from soft brie and mozzarella to hard cheddar and parmesan. Moulds give blue cheeses their veins.
+
+
+Rice
+
+Rice is the seed of a grass species and the staple food for more than half the world's population, especially in Asia. It grows in flooded paddy fields. Long grain, short grain, basmati and jasmine rice have different textures and aromas.
+
+
+Pho
+
+Pho is a Vietnamese soup of rice noodles in a clear broth simmered for hours with beef bones, star anise, cinnamon and charred onion. It is served with thin slices of beef or chicken and topped with herbs, lime, chilli and bean sprouts. Pho is often eaten for breakfast in Hanoi.
+
+
+Banh mi
+
+Banh mi is a Vietnamese sandwich served in a crisp baguette, a legacy of French colonial bakeries. Typical fillings include grilled pork, pate, pickled carrot and daikon, cucumber, coriander and chilli. It is a popular street food in Saigon.
+
+
+Curry
+
+Curry is a broad name for dishes with a sauce seasoned with spices such as turmeric, cumin, coriander and chilli. Curries are central to the cooking of India, Thailand, Japan and many other countries. Thai curries use coconut milk and fresh curry pastes.
+
+
+Taco
+
+A taco is a traditional Mexican dish of a corn or wheat tortilla folded around a filling. Fillings include grilled meat, fish, beans and vegetables, topped with salsa, onion and coriander. Tacos al pastor use pork cooked on a vertical spit.
+
+
+Olive oil
+
+Olive oil is pressed from olives and is a key part of Mediterranean cooking. Extra virgin olive oil is made by cold pressing without chemicals. Spain, Italy and Greece are the largest producers.
+
+
+Fermentation
+
+Fermentation is a metabolic process in which microorganisms such as yeast and bacteria convert sugars into acids, gases or alcohol. It is used to make bread, beer, wine, yoghurt, cheese, kimchi and soy sauce. Louis Pasteur showed that living microbes cause it.
+
+
+Paris
+
+Paris is the capital and largest city of France, on the river Seine. It is famous for the Eiffel Tower, the Louvre museum, Notre Dame cathedral and its cafes. Paris has been a centre of art, fashion and science for centuries.
+
+
+London
+
+London is the capital of England and the United Kingdom, on the river Thames. It was founded by the Romans as Londinium. Landmarks include the Tower of London, Big Ben, Buckingham Palace and the British Museum, and its underground railway opened in 1863.
+
+
+Tokyo
+
+Tokyo is the capital of Japan and one of the largest cities in the world. It mixes neon lit districts such as Shinjuku and Shibuya with quiet temples and gardens. Its rail network is famous for punctuality, and it hosted the Olympic Games in 1964 and 2021.
+
+
+New York City
+
+New York City is the most populous city in the United States. Its five boroughs include Manhattan, home to Wall Street, Broadway, Central Park and the Empire State Building. The Statue of Liberty in its harbour welcomed millions of immigrants.
+
+
+Hanoi
+
+Hanoi is the capital of Vietnam, on the Red River. Its Old Quarter is a maze of narrow streets named after the goods once sold there. The city has many lakes, including Hoan Kiem Lake, and is known for street food such as pho and bun cha.
+
+
+Rome
+
+Rome is the capital of Italy and was the centre of the Roman Empire. Ancient ruins such as the Colosseum, the Forum and the Pantheon stand among the modern city. Vatican City, the seat of the Catholic Church, is an independent state inside Rome.
+
+
+Egypt
+
+Egypt is a country in northeast Africa whose ancient civilisation grew along the river Nile. The pyramids of Giza and the Great Sphinx were built over four thousand years ago. Modern Egypt's capital is Cairo, and the Suez Canal links the Mediterranean and Red Seas.
+
+
+Great Pyramid of Giza
+
+The Great Pyramid of Giza was built as a tomb for the pharaoh Khufu around 2560 BC. It is the oldest of the Seven Wonders of the Ancient World and the only one still standing. It was the tallest human made structure for nearly four thousand years.
+
+
+Great Wall of China
+
+The Great Wall of China is a series of fortifications built over many centuries to protect Chinese states from northern invaders. Most of the wall that stands today was built during the Ming dynasty. It stretches for thousands of kilometres across mountains and deserts.
+
+
+Mount Everest
+
+Mount Everest is the highest mountain on Earth above sea level, on the border of Nepal and China in the Himalayas. Its summit is about 8849 metres high. Tenzing Norgay and Edmund Hillary were the first confirmed climbers to reach the top in 1953.
+
+
+Amazon River
+
+The Amazon River in South America carries more water than any other river on Earth. It flows from the Andes across Brazil to the Atlantic Ocean and drains the vast Amazon rainforest. It is home to piranhas, river dolphins and giant otters.
+
+
+Nile
+
+The Nile is a major river of northeast Africa and one of the longest rivers in the world. Its floods made the land fertile for ancient Egyptian farmers. The White Nile and Blue Nile meet at Khartoum in Sudan.
+
+
+Sahara
+
+The Sahara is the largest hot desert in the world, covering much of North Africa. It has sand dunes, rocky plateaus and gravel plains, and temperatures that swing sharply between day and night. Thousands of years ago it was green with lakes and grasslands.
+
+
+Antarctica
+
+Antarctica is the southernmost continent, almost entirely covered by a thick ice sheet. It is the coldest, windiest and driest continent. No one lives there permanently, but scientists staff research stations, and penguins and seals live on its coasts.
+
+
+Iceland
+
+Iceland is a Nordic island country in the North Atlantic that sits on the Mid Atlantic Ridge. It has active volcanoes, geysers, hot springs and glaciers. Geothermal energy heats most homes, and its parliament, the Althing, is one of the oldest in the world.
+
+
+Roman Empire
+
+The Roman Empire ruled the lands around the Mediterranean for centuries after Augustus became the first emperor in 27 BC. Romans built roads, aqueducts and cities and spread Latin and Roman law. The western empire fell in 476 AD while the eastern Byzantine Empire lasted until 1453.
+
+
+Ancient Greece
+
+Ancient Greece was a civilisation of city states such as Athens and Sparta. Athens developed early democracy, and Greek thinkers such as Socrates, Plato and Aristotle founded Western philosophy. The Greeks also held the first Olympic Games and built temples like the Parthenon.
+
+
+Renaissance
+
+The Renaissance was a period of European cultural rebirth from the fourteenth to the seventeenth century, beginning in Italy. Artists such as Leonardo da Vinci and Michelangelo and thinkers such as Galileo renewed interest in classical learning, art and science.
+
+
+Leonardo da Vinci
+
+Leonardo da Vinci was an Italian painter, engineer and scientist of the Renaissance. He painted the Mona Lisa and The Last Supper and filled notebooks with designs for flying machines and studies of anatomy. He is often seen as the model of a universal genius.
+
+
+Printing press
+
+The printing press with movable metal type was developed by Johannes Gutenberg in Germany around 1440. It made books much cheaper and faster to produce, spreading literacy and new ideas and helping drive the Reformation and the Scientific Revolution.
+
+
+Industrial Revolution
+
+The Industrial Revolution was the shift from hand production to machines that began in Britain in the late eighteenth century. Steam engines, textile mills, iron making and railways transformed work and cities. It raised productivity but also created harsh factory conditions and pollution.
+
+
+Steam engine
+
+A steam engine does mechanical work using the pressure of steam. James Watt's improvements in the 1760s, including a separate condenser, made steam engines efficient enough to power factories, mines, ships and locomotives during the Industrial Revolution.
+
+
+French Revolution
+
+The French Revolution began in 1789 with the storming of the Bastille and ended the absolute monarchy in France. It proclaimed liberty, equality and fraternity and the rights of man, but also led to the Reign of Terror. Napoleon Bonaparte rose to power in its aftermath.
+
+
+World War II
+
+World War II was a global war from 1939 to 1945 between the Allies and the Axis powers. It was the deadliest conflict in history and included the Holocaust and the first use of atomic bombs. Codebreakers at Bletchley Park helped the Allies by reading German messages.
+
+
+Cold War
+
+The Cold War was a period of rivalry between the United States and the Soviet Union from 1947 to 1991. It featured a nuclear arms race, proxy wars and the space race. It ended with the fall of the Berlin Wall in 1989 and the breakup of the Soviet Union.
+
+
+Space Race
+
+The Space Race was a Cold War competition between the Soviet Union and the United States to reach space. The Soviets launched Sputnik, the first satellite, in 1957 and sent Yuri Gagarin into orbit in 1961. The United States landed Apollo 11 on the Moon in 1969.
+
+
+Silk Road
+
+The Silk Road was a network of trade routes linking China with Central Asia, the Middle East and Europe. Merchants carried silk, spices, paper and porcelain, while religions, technologies and diseases also travelled along it. Marco Polo described his journey along it.
+
+
+Vikings
+
+The Vikings were seafaring Norse people from Scandinavia who raided, traded and settled across Europe from the late eighth to the eleventh century. Their longships reached Britain, Russia, Iceland, Greenland and even North America around the year 1000.
+
+
+Samurai
+
+The samurai were the warrior class of feudal Japan. They served lords called daimyo and followed a code of honour later called bushido. Their curved swords, the katana, were prized works of craftsmanship. The class was abolished during the Meiji reforms in the nineteenth century.
+
+
+Wolfgang Amadeus Mozart
+
+Wolfgang Amadeus Mozart was an Austrian composer of the Classical period who wrote more than six hundred works. A child prodigy, he toured Europe performing for royalty. His operas The Magic Flute and Don Giovanni and his symphonies and piano concertos are still widely performed.
+
+
+Ludwig van Beethoven
+
+Ludwig van Beethoven was a German composer and pianist who bridged the Classical and Romantic eras. He kept composing after he became almost completely deaf. His nine symphonies, including the Fifth and the choral Ninth, are among the most famous works of music.
+
+
+Johann Sebastian Bach
+
+Johann Sebastian Bach was a German composer of the Baroque period. He wrote organ music, cantatas, the Brandenburg Concertos and The Well Tempered Clavier. His mastery of counterpoint and harmony influenced nearly every composer who followed.
+
+
+The Beatles
+
+The Beatles were an English rock band formed in Liverpool in 1960, made up of John Lennon, Paul McCartney, George Harrison and Ringo Starr. They are the best selling music act of all time, and albums such as Revolver and Sgt. Pepper's Lonely Hearts Club Band changed popular music.
+
+
+Jazz
+
+Jazz is a music genre that began in African American communities of New Orleans in the early twentieth century. It features swing rhythms, blue notes and improvisation. Louis Armstrong, Duke Ellington, Charlie Parker and Miles Davis are among its greatest musicians.
+
+
+Blues
+
+The blues is a music genre that grew from African American work songs and spirituals in the Deep South. It often uses a twelve bar structure and expresses hardship and longing. The blues shaped jazz, rock and roll and soul music.
+
+
+Rock music
+
+Rock music is a genre of popular music that developed from rock and roll in the 1950s and 1960s. It is usually built around electric guitar, bass and drums. Subgenres include punk, heavy metal, grunge and indie rock.
+
+
+Hip hop
+
+Hip hop is a culture and music genre that began in the Bronx in New York City in the 1970s. Its elements include rapping, DJing, breakdancing and graffiti. Producers build beats from samples and drum machines.
+
+
+Piano
+
+The piano is a keyboard instrument in which pressing a key causes a felt hammer to strike a string. It was invented by Bartolomeo Cristofori in Italy around 1700. Because it can play soft and loud notes it replaced the harpsichord and became central to Western music.
+
+
+Guitar
+
+The guitar is a stringed instrument usually with six strings, played by strumming or plucking. Acoustic guitars use a hollow body to amplify sound, while electric guitars use pickups and an amplifier. It is the main instrument of rock, folk and flamenco music.
+
+
+Violin
+
+The violin is a wooden string instrument played with a bow. It is the smallest and highest pitched member of the violin family, which also includes the viola, cello and double bass. Violins made by Antonio Stradivari in the seventeenth and eighteenth centuries are highly prized.
+
+
+Music theory
+
+Music theory studies how music works: notes, scales, intervals, chords, rhythm and form. Western music is built on a twelve note scale, and major and minor keys give pieces a bright or dark character. Harmony describes how chords move from one to another.
+
+
+Football
+
+Association football, also called soccer, is a team sport played between two teams of eleven players who try to kick a ball into the opposing goal. Only the goalkeeper may handle the ball. The FIFA World Cup, held every four years, is the most watched sporting event in the world.
+
+
+Basketball
+
+Basketball is a team sport in which two teams of five players try to throw a ball through a hoop ten feet high. It was invented by James Naismith in 1891 in Massachusetts. The NBA is the leading professional league, and stars such as Michael Jordan became global icons.
+
+
+Tennis
+
+Tennis is a racket sport played between two players or two pairs on a court divided by a net. Points are scored as fifteen, thirty and forty, and matches are won in sets. The four Grand Slam tournaments are the Australian Open, the French Open, Wimbledon and the US Open.
+
+
+Olympic Games
+
+The Olympic Games are an international multi sport event held every four years, with separate summer and winter games. The modern games were founded by Pierre de Coubertin and first held in Athens in 1896, inspired by the ancient games at Olympia in Greece.
+
+
+Marathon
+
+The marathon is a long distance running race of 42.195 kilometres. It is named after the legend of a Greek messenger who ran from the battlefield of Marathon to Athens. Major city marathons such as Boston, London and Berlin attract tens of thousands of runners.
+
+
+Cricket
+
+Cricket is a bat and ball game played between two teams of eleven players on a field with a pitch in the centre. Batters score runs while bowlers try to hit the wickets. It is hugely popular in England, India, Australia and Pakistan, and Test matches can last five days.
+
+
+Cycling
+
+Cycling is riding a bicycle for transport, recreation or sport. The Tour de France is the most famous road race, held over three weeks every July. Bicycles are efficient: a rider can travel several times faster than walking for the same energy.
+
+
+Swimming
+
+Swimming is moving through water using the arms and legs. Competitive swimming has four strokes: freestyle, backstroke, breaststroke and butterfly. Michael Phelps won a record twenty three Olympic gold medals in swimming.
+
+
+Mathematics
+
+Mathematics is the study of numbers, quantities, shapes and patterns and the logical relationships between them. Its main branches include arithmetic, algebra, geometry, calculus, number theory and statistics. Mathematics is the language of science and engineering.
+
+
+Prime number
+
+A prime number is a whole number greater than one whose only divisors are one and itself, such as 2, 3, 5, 7 and 11. Euclid proved there are infinitely many primes. Large primes are the foundation of RSA public key cryptography.
+
+
+Calculus
+
+Calculus is the branch of mathematics that studies continuous change. Differential calculus deals with rates of change and slopes of curves, and integral calculus with areas and accumulation. Isaac Newton and Gottfried Leibniz developed it independently in the seventeenth century.
+
+
+Pythagorean theorem
+
+The Pythagorean theorem states that in a right angled triangle the square of the hypotenuse equals the sum of the squares of the other two sides. It is named after the Greek mathematician Pythagoras, though it was known earlier in Babylon and India.
+
+
+Logarithm
+
+A logarithm answers the question of how many times one number must be multiplied by itself to reach another. The natural logarithm uses the base e. Logarithms turn multiplication into addition, which made them essential for calculation before computers, and they appear in inverse document frequency.
+
+
+Probability
+
+Probability measures how likely an event is, on a scale from zero to one. It began with the study of games of chance by Pascal and Fermat. Probability theory underlies statistics, insurance, machine learning and quantum mechanics.
+
+
+Statistics
+
+Statistics is the science of collecting, analysing and interpreting data. Descriptive statistics summarise data with means, medians and standard deviations, while inferential statistics draw conclusions about populations from samples using hypothesis tests and confidence intervals.
+
+
+Fibonacci number
+
+The Fibonacci numbers form a sequence in which each number is the sum of the two before it: 0, 1, 1, 2, 3, 5, 8, 13 and so on. The ratio of consecutive numbers approaches the golden ratio. The pattern appears in sunflower seeds, pine cones and shells.
+
+
+Game theory
+
+Game theory is the mathematical study of strategic decisions between rational players. The prisoner's dilemma shows how individuals acting in their own interest can end up worse off. John Nash defined the equilibrium where no player gains by changing strategy alone.
+
+
+William Shakespeare
+
+William Shakespeare was an English playwright and poet, widely regarded as the greatest writer in the English language. His plays include Hamlet, Macbeth, Romeo and Juliet and A Midsummer Night's Dream. He also wrote 154 sonnets and invented many words still used today.
+
+
+Novel
+
+A novel is a long work of narrative prose fiction. Early examples include The Tale of Genji from Japan and Don Quixote by Miguel de Cervantes. The novel became the dominant literary form in the nineteenth century with writers such as Jane Austen, Charles Dickens and Leo Tolstoy.
+
+
+Library
+
+A library is a collection of books and other media made available for people to read or borrow. The ancient Library of Alexandria was one of the largest of its time. Librarians invented catalogues and classification systems such as the Dewey Decimal System to help readers find books, an early form of search.
+
+
+Wikipedia
+
+Wikipedia is a free online encyclopedia written collaboratively by volunteers. It was launched in 2001 by Jimmy Wales and Larry Sanger and now has millions of articles in hundreds of languages. Anyone can edit it, and articles cite sources to support their claims.
+
+
+Encyclopedia
+
+An encyclopedia is a reference work with summaries of knowledge on many subjects, usually arranged alphabetically. The French Encyclopedie of Diderot and the Encyclopaedia Britannica were landmark print editions before online encyclopedias took over.
+
+
+Painting
+
+Painting is the practice of applying pigment to a surface such as canvas, wood or a wall. Styles range from Renaissance realism to impressionism, cubism and abstract art. Famous painters include Rembrandt, Vincent van Gogh, Claude Monet and Pablo Picasso.
+
+
+Vincent van Gogh
+
+Vincent van Gogh was a Dutch post impressionist painter known for bold colour and expressive brushwork. His works include The Starry Night, Sunflowers and many self portraits. He sold very little in his lifetime but became one of the most famous artists in history.
+
+
+Photography
+
+Photography is the art of creating images by recording light, first on light sensitive film and now with digital sensors. The camera obscura led to the first permanent photographs in the 1820s. Aperture, shutter speed and ISO control how an image is exposed.
+
+
+Cinema
+
+Cinema, or film, is the art of moving pictures. The Lumiere brothers held one of the first public film screenings in Paris in 1895. Sound arrived in the late 1920s and colour soon after. Hollywood became the centre of the American film industry.
+
+
+Bicycle
+
+The bicycle is a human powered vehicle with two wheels, pedals and a chain drive. The safety bicycle of the 1880s, with equal sized wheels, made cycling popular. Bicycles are cheap, quiet and do not pollute, making them ideal for city transport.
+
+
+Railway
+
+A railway carries trains of passengers and freight on steel rails. The first public steam railway opened in England in 1825. High speed rail lines such as the Japanese Shinkansen and French TGV run at over three hundred kilometres per hour.
+
+
+Airplane
+
+An airplane is a powered aircraft with fixed wings that generate lift as air flows over them. The Wright brothers made the first controlled powered flight in 1903 at Kitty Hawk. Jet engines made fast international air travel common in the second half of the twentieth century.
+
+
+Electric car
+
+An electric car is powered by electric motors using energy stored in rechargeable batteries. Electric cars produce no exhaust, are quiet and have instant torque. Improvements in lithium ion batteries have increased their range and lowered their cost.
+
+
+Solar power
+
+Solar power converts sunlight into electricity, usually with photovoltaic panels made of silicon cells. The cost of solar panels has fallen dramatically, making it one of the cheapest sources of new electricity. Solar farms and rooftop panels are spreading worldwide.
+
+
+Wind power
+
+Wind power uses wind turbines to turn the kinetic energy of moving air into electricity. Large turbines stand on land and offshore, where winds are stronger and steadier. Denmark and the United Kingdom produce a large share of their electricity from wind.
+
+
+Nuclear power
+
+Nuclear power generates electricity from the heat of nuclear fission, when uranium atoms split in a reactor. It produces very little carbon dioxide but leaves long lived radioactive waste. The accidents at Chernobyl in 1986 and Fukushima in 2011 shaped public opinion.
+
+
+Coffee shop
+
+A coffee shop is a place that serves coffee, tea and light food, often a spot for meeting friends, reading and working. Coffee houses in Istanbul, Vienna and London were centres of conversation, business and news for centuries.
