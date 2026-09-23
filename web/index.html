@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Boogle</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="home">
+
+<!-- Home view -->
+<main id="home">
+  <h1 class="logo big" aria-label="Boogle">
+    <span class="l b">B</span><span class="l o1 eye"><i></i></span><span class="l o2 eye"><i></i></span><span class="l g">g</span><span class="l le">l</span><span class="l e">e</span>
+  </h1>
+  <form class="searchbox" id="home-form" autocomplete="off">
+    <svg class="mag" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5"/><path d="M15 15l5.5 5.5"/></svg>
+    <input id="home-q" name="q" placeholder="Search 205 hand-written articles" autofocus>
+  </form>
+  <div class="buttons">
+    <button type="button" id="btn-search">Boogle Search</button>
+    <button type="button" id="btn-lucky">I'm Feeling Boogly</button>
+  </div>
+  <p class="try">Try: <span id="suggestions"></span></p>
+  <p class="stats" id="stats">&nbsp;</p>
+</main>
+
+<!-- Results view -->
+<header id="topbar" hidden>
+  <a class="logo small" href="./" id="home-link" aria-label="Boogle home">
+    <span class="l b">B</span><span class="l o1">o</span><span class="l o2">o</span><span class="l g">g</span><span class="l le">l</span><span class="l e">e</span>
+  </a>
+  <form class="searchbox" id="top-form" autocomplete="off">
+    <svg class="mag" viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5"/><path d="M15 15l5.5 5.5"/></svg>
+    <input id="top-q" name="q">
+  </form>
+  <button type="button" id="btn-explain" class="explain-toggle" aria-pressed="false">
+    <svg viewBox="0 0 24 24"><path d="M4 19h16M6 16V9M11 16V5M16 16v-5"/></svg> Explain
+  </button>
+</header>
+
+<div id="results-view" hidden>
+  <section id="results">
+    <p class="meta" id="meta"></p>
+    <ol id="hits"></ol>
+  </section>
+  <aside id="explain" aria-label="How this ranking was computed">
+    <div class="ex-head">
+      <h2>How Boogle ranked this</h2>
+      <button type="button" class="close" id="ex-close" aria-label="Close">&times;</button>
+    </div>
+    <div id="ex-body"></div>
+  </aside>
+</div>
+
+<div id="doc-modal" hidden>
+  <div class="modal-card">
+    <button type="button" class="close" id="doc-close" aria-label="Close">&times;</button>
+    <h2 id="doc-title"></h2>
+    <p id="doc-content"></p>
+  </div>
+</div>
+
+<footer id="foot">Boogle &middot; a tiny Rust search engine &middot; inverted index + TF-IDF <span id="mode"></span></footer>
+
+<script src="app.js"></script>
+</body>
+</html>
