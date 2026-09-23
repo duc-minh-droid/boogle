@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .box { fill: #f8f9fa; stroke: #3c4043; stroke-width: 1.6; }
+    .hd { font-size: 15px; font-weight: 700; fill: #202124; }
+    .tx { font-size: 12.5px; fill: #3c4043; }
+    .mono { font-family: Consolas, Menlo, monospace; font-size: 12px; fill: #3c4043; }
+    .lab { font-size: 12px; font-weight: 700; letter-spacing: .08em; fill: #5f6368; }
+    .arr { stroke: #5f6368; stroke-width: 2; fill: none; marker-end: url(#a); }
+    .dash { stroke: #5f6368; stroke-width: 1.6; fill: none; stroke-dasharray: 5 5; marker-end: url(#a); }
+    .ah { fill: #5f6368; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0d1117; }
+      .box { fill: #161b22; stroke: #c9d1d9; }
+      .hd { fill: #f0f6fc; } .tx, .mono { fill: #c9d1d9; } .lab { fill: #8b949e; }
+      .arr, .dash { stroke: #8b949e; } .ah { fill: #8b949e; }
+    }
+  </style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="ah" d="M0 0L10 5L0 10z"/></marker></defs>
+  <rect class="bg" width="960" height="470" rx="14"/>
+
+  <text class="lab" x="30" y="36">INDEX TIME (once, at startup)</text>
+  <!-- row 1 -->
+  <rect class="box" x="30" y="52" width="170" height="118" rx="10" transform="rotate(-.6 115 111)"/>
+  <text class="hd" x="46" y="78">wiki.txt</text>
+  <text class="mono" x="46" y="100">Title</text>
+  <text class="mono" x="46" y="116">(blank)</text>
+  <text class="mono" x="46" y="132">content ...</text>
+  <text class="mono" x="46" y="148">(2+ blank lines)</text>
+  <text class="mono" x="46" y="164">Next title</text>
+
+  <path class="arr" d="M204 110 C216 108, 224 112, 236 110"/>
+  <rect class="box" x="240" y="52" width="180" height="118" rx="10" transform="rotate(.5 330 111)"/>
+  <text class="hd" x="256" y="78">parse_documents</text>
+  <text class="tx" x="256" y="102">split blocks on runs of</text>
+  <text class="tx" x="256" y="118">two or more blank lines</text>
+  <text class="tx" x="256" y="140">first line = title</text>
+  <text class="tx" x="256" y="156">rest = content</text>
+
+  <path class="arr" d="M424 110 C436 112, 444 108, 456 110"/>
+  <rect class="box" x="460" y="52" width="200" height="118" rx="10" transform="rotate(-.4 560 111)"/>
+  <text class="hd" x="476" y="78">tokenize</text>
+  <text class="mono" x="476" y="102">"Running,"</text>
+  <text class="mono" x="488" y="120">lowercase</text><text class="mono" x="570" y="120">running,</text>
+  <text class="mono" x="488" y="138">strip</text><text class="mono" x="570" y="138">running</text>
+  <text class="mono" x="488" y="156">stem</text><text class="mono" x="570" y="156" font-weight="700">run</text>
+
+  <path class="arr" d="M664 110 C676 108, 684 112, 696 110"/>
+  <rect class="box" x="700" y="52" width="230" height="118" rx="10" transform="rotate(.6 815 111)"/>
+  <text class="hd" x="716" y="78">Index::build</text>
+  <text class="mono" x="716" y="102">posting_list</text><text class="mono" x="812" y="102">term → {doc ids}</text>
+  <text class="mono" x="716" y="122">freq</text><text class="mono" x="812" y="122">(term,doc) → n</text>
+  <text class="mono" x="716" y="142">doc_lengths</text><text class="mono" x="812" y="142">doc → tokens</text>
+  <text class="mono" x="716" y="162">num_docs</text><text class="mono" x="812" y="162">N</text>
+
+  <text class="lab" x="30" y="226">QUERY TIME (every search)</text>
+  <!-- row 2 -->
+  <rect class="box" x="30" y="242" width="150" height="96" rx="10" transform="rotate(.5 105 290)"/>
+  <text class="hd" x="46" y="268">query</text>
+  <text class="mono" x="46" y="292">"running search</text>
+  <text class="mono" x="46" y="308"> engines"</text>
+
+  <path class="arr" d="M184 290 C196 288, 204 292, 216 290"/>
+  <rect class="box" x="220" y="242" width="150" height="96" rx="10" transform="rotate(-.5 295 290)"/>
+  <text class="hd" x="236" y="268">query_terms</text>
+  <text class="tx" x="236" y="290">same tokenize(),</text>
+  <text class="tx" x="236" y="306">duplicates removed</text>
+  <text class="mono" x="236" y="326">[run, search, engin]</text>
+
+  <path class="arr" d="M374 290 C386 292, 394 288, 406 290"/>
+  <rect class="box" x="410" y="242" width="160" height="96" rx="10" transform="rotate(.4 490 290)"/>
+  <text class="hd" x="426" y="268">union</text>
+  <text class="tx" x="426" y="290">merge posting lists</text>
+  <text class="tx" x="426" y="306">of every term</text>
+  <text class="mono" x="426" y="326">35 of 205 docs</text>
+
+  <path class="arr" d="M574 290 C586 288, 594 292, 606 290"/>
+  <rect class="box" x="610" y="242" width="160" height="96" rx="10" transform="rotate(-.6 690 290)"/>
+  <text class="hd" x="626" y="268">score</text>
+  <text class="mono" x="626" y="292">Σ tf(t,d) × idf(t)</text>
+  <text class="tx" x="626" y="314">see tfidf.svg</text>
+
+  <path class="arr" d="M774 290 C786 292, 794 288, 806 290"/>
+  <rect class="box" x="810" y="242" width="120" height="96" rx="10" transform="rotate(.5 870 290)"/>
+  <text class="hd" x="826" y="268">sort</text>
+  <text class="tx" x="826" y="290">by score desc,</text>
+  <text class="tx" x="826" y="306">ties by doc id</text>
+
+  <!-- index feeds query -->
+  <path class="dash" d="M780 174 C760 205, 530 205, 495 238"/>
+  <path class="dash" d="M840 174 C840 200, 700 205, 690 238"/>
+
+  <!-- outputs -->
+  <path class="arr" d="M870 342 C870 362, 860 372, 840 382"/>
+  <text class="lab" x="30" y="386">FRONT ENDS (same engine.rs)</text>
+  <rect class="box" x="30" y="400" width="270" height="52" rx="10" transform="rotate(-.4 165 426)"/>
+  <text class="mono" x="46" y="422">boogle / boogle search q</text>
+  <text class="tx" x="46" y="440">interactive prompt, plain text</text>
+  <rect class="box" x="320" y="400" width="290" height="52" rx="10" transform="rotate(.4 465 426)"/>
+  <text class="mono" x="336" y="422">boogle explain q [--json]</text>
+  <text class="tx" x="336" y="440">tokens, postings, per-term tf and idf</text>
+  <rect class="box" x="630" y="400" width="300" height="52" rx="10" transform="rotate(-.4 780 426)"/>
+  <text class="mono" x="646" y="422">boogle serve → /api/search, /api/explain</text>
+  <text class="tx" x="646" y="440">JSON API + web UI in web/</text>
+</svg>

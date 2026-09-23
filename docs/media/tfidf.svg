@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <style>
+    .bg { fill: #ffffff; }
+    .card { fill: #f8f9fa; stroke: #3c4043; stroke-width: 1.6; }
+    .big { font-family: Cambria, Georgia, serif; font-size: 30px; fill: #202124; }
+    .hd { font-size: 15px; font-weight: 700; fill: #202124; }
+    .tx { font-size: 13px; fill: #3c4043; }
+    .mono { font-family: Consolas, Menlo, monospace; font-size: 13px; fill: #3c4043; }
+    .lab { font-size: 12px; font-weight: 700; letter-spacing: .08em; fill: #5f6368; }
+    .track { fill: #e8eaed; }
+    .note { stroke: #5f6368; stroke-width: 1.4; fill: none; }
+    @media (prefers-color-scheme: dark) {
+      .bg { fill: #0d1117; } .card { fill: #161b22; stroke: #c9d1d9; }
+      .big, .hd { fill: #f0f6fc; } .tx, .mono { fill: #c9d1d9; } .lab { fill: #8b949e; }
+      .track { fill: #30363d; } .note { stroke: #8b949e; }
+    }
+  </style>
+  <rect class="bg" width="960" height="420" rx="14"/>
+
+  <text class="lab" x="30" y="38">THE FORMULA</text>
+  <text class="big" x="30" y="84">score(d) = Σ<tspan font-size="18" dy="8">t ∈ query</tspan><tspan dy="-8"> tf(t, d) × idf(t)</tspan></text>
+
+  <rect class="card" x="30" y="108" width="430" height="106" rx="10" transform="rotate(-.5 245 154)"/>
+  <text class="hd" x="48" y="134" fill="#4285f4">term frequency</text>
+  <text class="mono" x="48" y="160">tf(t,d) = count(t,d) / length(d)</text>
+  <text class="tx" x="48" y="184">How much of this document is about t. Dividing</text>
+  <text class="tx" x="48" y="201">by length stops long articles winning by default.</text>
+
+  <rect class="card" x="490" y="108" width="440" height="106" rx="10" transform="rotate(.5 710 154)"/>
+  <text class="hd" x="508" y="134" fill="#ea4335">inverse document frequency</text>
+  <text class="mono" x="508" y="160">idf(t) = ln( N / df(t) )</text>
+  <text class="tx" x="508" y="184">df = number of docs containing t. Rare terms get</text>
+  <text class="tx" x="508" y="201">a big weight; a term in every doc gets ln(1) = 0.</text>
+
+  <text class="lab" x="30" y="250">WORKED EXAMPLE: "running search engines" vs. the "Stemming" article (45 tokens, N = 205)</text>
+
+  <!-- rows -->
+  <text class="mono" x="30" y="280">run</text>
+  <text class="mono" x="100" y="280">3/45 × ln(205/17) = 0.0667 × 2.490 = 0.1660</text>
+  <text class="mono" x="30" y="306">search</text>
+  <text class="mono" x="100" y="306">1/45 × ln(205/10) = 0.0222 × 3.020 = 0.0671</text>
+  <text class="mono" x="30" y="332">engin</text>
+  <text class="mono" x="100" y="332">1/45 × ln(205/14) = 0.0222 × 2.684 = 0.0596</text>
+  <text class="hd" x="100" y="362">total = 0.2928</text>
+  <text class="tx" x="210" y="362">(rank 2 behind "Search engine" at 0.3291)</text>
+
+  <!-- stacked bar: scale 0.33 -> 360px -->
+  <rect class="track" x="560" y="268" width="370" height="22" rx="5"/>
+  <rect x="560" y="268" width="181" height="22" fill="#4285f4" rx="4"/>
+  <rect x="741" y="268" width="73" height="22" fill="#ea4335"/>
+  <rect x="814" y="268" width="65" height="22" fill="#f9ab00"/>
+  <text class="tx" x="560" y="310">Stemming: "run" is the biggest slice (3 hits in a short doc)</text>
+  
+
+  <rect class="track" x="560" y="324" width="370" height="22" rx="5"/>
+  <rect x="560" y="324" width="190" height="22" fill="#ea4335" rx="4"/>
+  <rect x="750" y="324" width="169" height="22" fill="#f9ab00"/>
+  <text class="tx" x="560" y="366">Search engine (no "run", but 3× search, 3× engin in 52 tokens)</text>
+
+
+  <text class="tx" x="30" y="398">These numbers come straight from <tspan class="mono">boogle explain running search engines</tspan>, and the web UI draws the same bars live.</text>
+</svg>
