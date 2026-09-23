@@ -1,5 +1,7 @@
 # boogle
 
+**Live demo:** https://boogle-lovat.vercel.app
+
 A tiny search engine in Rust: an in-memory inverted index, Snowball stemming and TF-IDF ranking, with a CLI, a JSON API and a web UI that shows exactly how each result was scored.
 
 ![Boogle demo: searching and opening the explain panel](docs/media/demo.gif)
