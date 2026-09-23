@@ -2,6 +2,10 @@
 name = "boogle"
 version = "0.1.0"
 edition = "2024"
+description = "A tiny TF-IDF search engine with an explainable web UI"
 
 [dependencies]
 rust-stemmers = "^1.0"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tiny_http = "0.12"
